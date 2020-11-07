@@ -29,6 +29,15 @@ ORDER BY dm
 
 -- 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 
+Select e.emp_no "Employee Number",
+e.last_name "Last Name",
+e.first_name "First Name",
+d.dept_name "Department Name"
+FROM employees as e
+JOIN dept_emp de ON (e.emp_no = de.emp_no)
+JOIN departments d ON (de.dept_no = d.dept_no)
+ORDER BY e
+
 
 
 
