@@ -38,6 +38,15 @@ JOIN dept_emp de ON (e.emp_no = de.emp_no)
 JOIN departments d ON (de.dept_no = d.dept_no)
 ORDER BY e
 
+-- 5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
+
+Select first_name "First Name",
+last_name "Last Name",
+sex "Sex"
+From employees
+WHERE first_name = 'Hercules'
+AND last_name LIKE 'B%'
+
 
 
 
